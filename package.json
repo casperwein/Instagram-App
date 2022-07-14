@@ -1,0 +1,34 @@
+{
+    "name": "mygram",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "NODE_ENV=test npx jest --detectOpenHandles",
+        "start": "node index.js",
+        "db": "npx sequelize db:migrate",
+        "undo": "npx sequelize db:migrate:undo:all",
+        "seed": "npx sequelize db:seed:all",
+        "db:create:test": "NODE_ENV=test npx sequelize db:create",
+        "db:migrate:test": "NODE_ENV=test npx sequelize db:migrate"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "bcrypt": "^5.0.1",
+        "dotenv": "^16.0.0",
+        "express": "^4.17.3",
+        "joi": "^17.6.0",
+        "jsonwebtoken": "^8.5.1",
+        "nodemon": "^2.0.16",
+        "pg": "^8.7.3",
+        "sequelize": "^6.19.0"
+    },
+    "devDependencies": {
+        "jest": "^28.1.0",
+        "node-mocks-http": "^1.11.0",
+        "sequelize-cli": "^6.4.1",
+        "supertest": "^6.2.3"
+    }
+}
